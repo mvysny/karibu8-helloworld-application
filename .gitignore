@@ -2,3 +2,5 @@
 build
 .gradle
 *.iml
+styles.css
+styles.css.gz

@@ -15,6 +15,7 @@ import com.vaadin.ui.Label
 import com.vaadin.ui.TextField
 import com.vaadin.ui.UI
 import com.vaadin.ui.VerticalLayout
+import org.slf4j.LoggerFactory
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window
@@ -23,7 +24,7 @@ import com.vaadin.ui.VerticalLayout
  * The UI is initialized using [init]. This method is intended to be
  * overridden to add component to the user interface and initialize non-component functionality.
  */
-@Theme("valo") // @todo use mytheme
+@Theme("mytheme")
 class MyUI : UI() {
 
     private lateinit var layout: VerticalLayout
@@ -34,10 +35,12 @@ class MyUI : UI() {
             val name = textField {
                 caption = "Type your name here:"
             }
-            button("Click Me", { layout.label("Thanks ${name.value}, it works!") })
+            button("Click Me", {
+                println("Thanks ${name.value}, it works!")
+                layout.label("Thanks ${name.value}, it works!")
+            })
         }
     }
-
 }
 
 @WebServlet(urlPatterns = arrayOf("/*"), name = "MyUIServlet", asyncSupported = true)
