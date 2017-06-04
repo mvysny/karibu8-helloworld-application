@@ -9,7 +9,7 @@ Workflow
 
 To compile the entire project, run `./gradlew`.
 
-To run the application, run `./gradlew appRun` and open http://localhost:8080/karibu-helloworld-application .
+To run the application, run `./gradlew appRun` and open http://localhost:8080/ .
 
 To produce a deployable production mode WAR:
 - change productionMode to true in the servlet class configuration (located in the [MyUI.kt](src/main/kotlin/org/test/MyUI.kt) file)
