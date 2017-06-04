@@ -1,4 +1,6 @@
-# vaadin-app
+[![Build Status](https://travis-ci.org/mvysny/karibu-helloworld-application.svg?branch=master)](https://travis-ci.org/mvysny/karibu-helloworld-application)
+
+# Karibu-DSL Example App / Archetype
 
 Template for a simple Kotlin-DSL application that only requires a Servlet 3.0 container to run.
 Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl); for more information about the
