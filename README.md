@@ -9,6 +9,18 @@ Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl); for more information ab
 Karibu-DSL framework please see https://github.com/mvysny/karibu-dsl .
 For more information on Vaadin please see https://vaadin.com/docs/-/part/framework/tutorial.html
 
+# Getting Started
+
+To quickly start the app, just type this into your terminal:
+
+```bash
+git clone https://github.com/mvysny/karibu-helloworld-application
+cd karibu-helloworld-application
+./gradlew build appRun
+```
+
+The app will be running on http://localhost:8080/
+
 # Workflow
 
 To compile the entire project, run `./gradlew`.
