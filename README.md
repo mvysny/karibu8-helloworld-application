@@ -11,7 +11,7 @@ For more information on Vaadin please see https://vaadin.com/docs/-/part/framewo
 
 # Getting Started
 
-To quickly start the app, just type this into your terminal:
+To quickly start the app, make sure that you have Java 8 JDK installed. Then, just type this into your terminal:
 
 ```bash
 git clone https://github.com/mvysny/karibu-helloworld-application
