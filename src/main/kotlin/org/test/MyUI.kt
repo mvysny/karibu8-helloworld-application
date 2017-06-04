@@ -15,7 +15,6 @@ import com.vaadin.ui.Label
 import com.vaadin.ui.TextField
 import com.vaadin.ui.UI
 import com.vaadin.ui.VerticalLayout
-import org.slf4j.LoggerFactory
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window
