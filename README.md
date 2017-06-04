@@ -3,6 +3,7 @@
 Template for a simple Kotlin-DSL application that only requires a Servlet 3.0 container to run.
 Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl); for more information about the
  Karibu-DSL framework please see https://github.com/mvysny/karibu-dsl .
+ For more information on Vaadin please see https://vaadin.com/docs/-/part/framework/tutorial.html
 
 # Workflow
 
@@ -54,6 +55,8 @@ and allows you to debug the code, modify the code and hot-redeploy the code into
 instance, without having to restart Tomcat.
 
 1. First, download Tomcat and register it into your Intellij IDEA properly: https://www.jetbrains.com/help/idea/2017.1/defining-application-servers-in-intellij-idea.html
+2. Then just open this project in Intellij, simply by selecting `File / Open...` and click on the
+   `build.gradle` file. When asked, select "Open as Project".
 2. You can then create a launch configuration which will launch this example app in Tomcat with Intellij: just
    scroll to the end of this tutorial: https://kotlinlang.org/docs/tutorials/httpservlets.html
 3. Start your newly created launch configuration in Debug mode. This way, you can modify the code
