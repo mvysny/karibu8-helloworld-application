@@ -2,7 +2,8 @@ vaadin-app
 ==============
 
 Template for a simple Kotlin-DSL application that only requires a Servlet 3.0 container to run.
-
+Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl); for more information about the
+ Karibu-DSL framework please see https://github.com/mvysny/karibu-dsl .
 
 Workflow
 ========
