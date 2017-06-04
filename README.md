@@ -3,9 +3,11 @@
 # Karibu-DSL Example App / Archetype
 
 Template for a simple Kotlin-DSL application that only requires a Servlet 3.0 container to run.
+Just clone this repo and start experimenting!
+
 Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl); for more information about the
- Karibu-DSL framework please see https://github.com/mvysny/karibu-dsl .
- For more information on Vaadin please see https://vaadin.com/docs/-/part/framework/tutorial.html
+Karibu-DSL framework please see https://github.com/mvysny/karibu-dsl .
+For more information on Vaadin please see https://vaadin.com/docs/-/part/framework/tutorial.html
 
 # Workflow
 
