@@ -37,17 +37,9 @@ defaultTasks 'clean', 'build'
 repositories {
     mavenCentral()
     jcenter()
-    maven {
-        name 'vaadin-addons'
-        url 'http://maven.vaadin.com/vaadin-addons'
-    }
-    maven {
-        name 'vaadin-prereleases'
-        url 'https://maven.vaadin.com/vaadin-prereleases'
-    }
-    maven {
-        url "https://dl.bintray.com/mvysny/vaadin-on-kotlin"
-    }
+    maven { url 'http://maven.vaadin.com/vaadin-addons' }
+    maven { url 'https://maven.vaadin.com/vaadin-prereleases' }
+    maven { url "https://dl.bintray.com/mvysny/vaadin-on-kotlin" }
 }
 
 dependencies {
