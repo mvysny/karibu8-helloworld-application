@@ -44,7 +44,7 @@ repositories {
 
 dependencies {
     // Karibu-DSL dependency
-    compile 'com.github.vok.karibudsl:karibu-dsl-v8:0.2.1'
+    compile 'com.github.vok.karibudsl:karibu-dsl-v8:0.2.2'
 
     // Vaadin
     compile "com.vaadin:vaadin-client-compiled:$vaadin8_version"
