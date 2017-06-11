@@ -1,27 +1,15 @@
-buildscript {
-    ext.vaadin8_version = '8.1.0.beta1'
-    ext.kotlin_version = '1.1.2-3'
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
 plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.1.2-2"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id "org.akhikhl.gretty" version "1.4.2"
     id 'fi.jasoft.plugin.vaadin' version '1.1.11'
 }
-apply plugin: 'kotlin'
 apply plugin: 'war'
 
 vaadin {
     version '8.1.0.beta1'
     manageDependencies = false  // 'true' doesn't work with Gretty - Gretty won't pull in Vaadin dependencies on appRun and will crash because of missing widgetset
-    // have to use Gretty here, disable Vaadin Gradle Plugin jetty support for now
+    // have to use Gretty here, disabling Vaadin Gradle Plugin jetty support for now
 //    logToConsole = true
 //    vaadinRun {
 //        server = 'jetty'
@@ -47,8 +35,8 @@ dependencies {
     compile 'com.github.vok.karibudsl:karibu-dsl-v8:0.2.2'
 
     // Vaadin
-    compile "com.vaadin:vaadin-client-compiled:$vaadin8_version"
-    compile "com.vaadin:vaadin-server:$vaadin8_version"
-    compile "com.vaadin:vaadin-themes:$vaadin8_version"
+    compile "com.vaadin:vaadin-client-compiled:${vaadin.version}"
+    compile "com.vaadin:vaadin-server:${vaadin.version}"
+    compile "com.vaadin:vaadin-themes:${vaadin.version}"
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
 }
