@@ -7,7 +7,7 @@ plugins {
 apply plugin: 'war'
 
 vaadin {
-    version '8.1.0'
+    version '8.1.1'
     manageDependencies = false  // 'true' doesn't work with Gretty - Gretty won't pull in Vaadin dependencies on appRun and will crash because of missing widgetset
     // have to use Gretty here, disabling Vaadin Gradle Plugin jetty support for now
 //    logToConsole = true
