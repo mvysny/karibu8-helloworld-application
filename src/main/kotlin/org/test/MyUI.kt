@@ -26,7 +26,7 @@ class MyUI : UI() {
     private lateinit var layout: VerticalLayout
 
     @Override
-    override fun init(vaadinRequest: VaadinRequest) {
+    override fun init(vaadinRequest: VaadinRequest?) {
         layout = verticalLayout {
             val name = textField {
                 caption = "Type your name here:"
