@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet
 
 import com.vaadin.annotations.Theme
 import com.vaadin.annotations.VaadinServletConfiguration
+import com.vaadin.navigator.PushStateNavigation
 import com.vaadin.server.VaadinRequest
 import com.vaadin.server.VaadinServlet
 import com.vaadin.ui.UI
@@ -21,6 +22,7 @@ import com.vaadin.ui.VerticalLayout
  * overridden to add component to the user interface and initialize non-component functionality.
  */
 @Theme("mytheme")
+@PushStateNavigation
 class MyUI : UI() {
 
     private lateinit var layout: VerticalLayout
