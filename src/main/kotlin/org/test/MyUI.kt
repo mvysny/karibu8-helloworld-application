@@ -25,10 +25,9 @@ import com.vaadin.ui.VerticalLayout
 @PushStateNavigation
 class MyUI : UI() {
 
-    private lateinit var layout: VerticalLayout
-
     @Override
     override fun init(vaadinRequest: VaadinRequest?) {
+        lateinit var layout: VerticalLayout
         layout = verticalLayout {
             val name = textField {
                 caption = "Type your name here:"
@@ -41,6 +40,6 @@ class MyUI : UI() {
     }
 }
 
-@WebServlet(urlPatterns = arrayOf("/*"), name = "MyUIServlet", asyncSupported = true)
+@WebServlet(urlPatterns = ["/*"], name = "MyUIServlet", asyncSupported = true)
 @VaadinServletConfiguration(ui = MyUI::class, productionMode = false)
 class MyUIServlet : VaadinServlet()
