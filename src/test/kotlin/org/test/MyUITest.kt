@@ -17,8 +17,8 @@ class MyUITest {
     @Test
     fun simpleUITest() {
         val layout = UI.getCurrent().content as VerticalLayout
-        _get<TextField>(caption = "Type your name here:").value = "Baron Vladimir Harkonnen"
-        _get<Button>(caption = "Click Me")._click()
+        _get<TextField> { caption = "Type your name here:" } .value = "Baron Vladimir Harkonnen"
+        _get<Button> { caption = "Click Me" } ._click()
         expect(3) { layout.componentCount }
         expect("Thanks Baron Vladimir Harkonnen, it works!") { (layout.last() as Label).value }
         expect("Thanks Baron Vladimir Harkonnen, it works!") { _get<Label>().value }
