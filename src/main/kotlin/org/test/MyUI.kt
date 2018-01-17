@@ -1,9 +1,6 @@
 package org.test
 
-import com.github.vok.karibudsl.button
-import com.github.vok.karibudsl.label
-import com.github.vok.karibudsl.textField
-import com.github.vok.karibudsl.verticalLayout
+import com.github.vok.karibudsl.*
 import javax.servlet.annotation.WebServlet
 
 import com.vaadin.annotations.Theme
