@@ -34,6 +34,12 @@ dependencies {
     // include proper kotlin version
     compile(kotlin("stdlib-jre8"))
 
+    // logging
+    // currently we are logging through the SLF4J API to LogBack. See src/main/resources/logback.xml file for the logger configuration
+    compile("ch.qos.logback:logback-classic:1.2.3")
+    // this will allow us to configure Vaadin to log to SLF4J
+    compile("org.slf4j:jul-to-slf4j:1.7.25")
+
     // test support
     testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.18")
     testCompile("junit:junit:4.12")

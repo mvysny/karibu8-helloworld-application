@@ -10,6 +10,7 @@ import com.vaadin.server.VaadinRequest
 import com.vaadin.server.VaadinServlet
 import com.vaadin.ui.UI
 import com.vaadin.ui.VerticalLayout
+import org.slf4j.bridge.SLF4JBridgeHandler
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window
@@ -39,4 +40,12 @@ class MyUI : UI() {
 
 @WebServlet(urlPatterns = ["/*"], name = "MyUIServlet", asyncSupported = true)
 @VaadinServletConfiguration(ui = MyUI::class, productionMode = false)
-class MyUIServlet : VaadinServlet()
+class MyUIServlet : VaadinServlet() {
+    companion object {
+        init {
+            // Vaadin logs into java.util.logging. Redirect that, so that all logging goes through slf4j.
+            SLF4JBridgeHandler.removeHandlersForRootLogger()
+            SLF4JBridgeHandler.install()
+        }
+    }
+}
