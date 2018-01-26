@@ -19,13 +19,18 @@ cd karibu-helloworld-application
 ./gradlew build appRun
 ```
 
-The app will be running on http://localhost:8080/
+The app will be running on [http://localhost:8080/](http://localhost:8080/)
+
+Since the build system is a Gradle file written in Kotlin, we suggest you use [Intellij IDEA](https://www.jetbrains.com/idea/download)
+to edit the project files. The Community edition is enough to run the server
+via Gretty's `./gradlew appRun`. The Ultimate edition will allow you to run the project in Tomcat - this is the recommended
+option for a real development.
 
 # Workflow
 
 To compile the entire project, run `./gradlew`.
 
-To run the application, run `./gradlew appRun` and open http://localhost:8080/ .
+To run the application, run `./gradlew appRun` and open [http://localhost:8080/](http://localhost:8080/) .
 
 To produce a deployable production mode WAR:
 - change `productionMode` to `true` in the servlet class configuration (located in the [MyUI.kt](src/main/kotlin/org/test/MyUI.kt) file)
@@ -33,12 +38,11 @@ To produce a deployable production mode WAR:
 - You will find the WAR file in `build/libs/karibu-helloworld-application.war`
 
 This will allow you to quickly start the example app and allow you to do some basic modifications.
-For real development we recommend Intellij IDEA Ultimate, please see below for instructions.
 
 ## Client-Side compilation
 
-The generated maven project is using an automatically generated widgetset by default. 
-When you add a dependency that needs client-side compilation, the maven plugin will 
+The project is using an automatically generated widgetset by default. 
+When you add a dependency that needs client-side compilation, the Vaadin Gradle plugin will 
 automatically generate it for you. Your own client-side customisations can be added into
 package "client".
 
@@ -78,3 +82,10 @@ instance, without having to restart Tomcat.
 3. Start your newly created launch configuration in Debug mode. This way, you can modify the code
    and press `Ctrl+F9` to hot-redeploy the code. This only redeploys java code though, to
    redeploy resources just press `Ctrl+F10` and select "Update classes and resources"
+
+# More Resources
+
+* The DSL technique is used to allow you to nest your components in a structured code. This is provided by the
+  Karibu-DSL library; please visit the [Karibu-DSL home page](https://github.com/mvysny/karibu-dsl) for more information.
+* The serverless testing is demonstrated in the [MyUITest.kt](src/test/kotlin/org/test/MyUITest.kt) file.
+  Please read [Serverless Web Testing](http://mavi.logdown.com/posts/3147601) for more information.
