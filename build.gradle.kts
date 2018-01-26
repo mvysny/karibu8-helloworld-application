@@ -20,7 +20,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.2.1"
+    version = "8.3.0"
 }
 
 gretty {
@@ -29,7 +29,7 @@ gretty {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.19")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.20")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jre8"))
@@ -41,7 +41,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.18")
+    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.20")
     testCompile("junit:junit:4.12")
     testCompile(kotlin("test"))
 
