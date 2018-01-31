@@ -32,7 +32,7 @@ dependencies {
     compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.20")
 
     // include proper kotlin version
-    compile(kotlin("stdlib-jre8"))
+    compile(kotlin("stdlib-jdk8"))
 
     // logging
     // currently we are logging through the SLF4J API to LogBack. See src/main/resources/logback.xml file for the logger configuration
