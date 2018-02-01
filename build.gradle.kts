@@ -29,7 +29,7 @@ gretty {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.20")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.21")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -41,7 +41,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.20")
+    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.21")
     testCompile("junit:junit:4.12")
     testCompile(kotlin("test"))
 
