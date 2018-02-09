@@ -42,8 +42,9 @@ dependencies {
 
     // test support
     testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.21")
-    testCompile("junit:junit:4.12")
     testCompile(kotlin("test"))
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.3")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.3")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")

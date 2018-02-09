@@ -4,12 +4,12 @@ import com.github.karibu.testing.MockVaadin
 import com.github.karibu.testing._click
 import com.github.karibu.testing._get
 import com.vaadin.ui.*
-import org.junit.Before
-import org.junit.Test
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 import kotlin.test.expect
 
 class MyUITest {
-    @Before
+    @BeforeEach
     fun mockVaadin() {
         MockVaadin.setup({ MyUI() })
     }
