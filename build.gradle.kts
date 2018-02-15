@@ -42,9 +42,7 @@ dependencies {
 
     // test support
     testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.22")
-    testCompile(kotlin("test"))
-    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.3")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.3")
+    testCompile("com.github.mvysny.dynatest:dynatest:0.2")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
