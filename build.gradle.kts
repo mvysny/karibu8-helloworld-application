@@ -12,7 +12,7 @@ defaultTasks("clean", "build")
 repositories {
     mavenCentral()
     jcenter()
-    maven("https://dl.bintray.com/mvysny/vaadin-on-kotlin")
+    maven("https://dl.bintray.com/mvysny/github")
 }
 
 tasks.withType<KotlinCompile> {
@@ -29,7 +29,7 @@ gretty {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.21")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.22")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -41,7 +41,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.21")
+    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.22")
     testCompile(kotlin("test"))
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.3")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.3")
