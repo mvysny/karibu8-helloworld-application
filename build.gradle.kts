@@ -42,7 +42,7 @@ gretty {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.23")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.2.24")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -54,7 +54,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.23")
+    testCompile("com.github.vok.karibudsl:karibu-testing-v8:0.2.24")
     testCompile("com.github.mvysny.dynatest:dynatest:0.6")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
