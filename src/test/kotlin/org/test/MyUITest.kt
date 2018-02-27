@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 import kotlin.test.expect
 
 /**
- * Tests the UI. Uses the [Serverless testing approach](https://github.com/mvysny/karibu-testing).
+ * Tests the UI. Uses the Serverless testing approach as provided by the [Karibu Testing](https://github.com/mvysny/karibu-testing) library.
  */
 class MyUITest : DynaTest({
     beforeEach { MockVaadin.setup({ MyUI() }) }
