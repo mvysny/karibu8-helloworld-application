@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.2.21"
+    kotlin("jvm") version "1.2.30"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.akhikhl.gretty") version "2.0.0"
     id("com.devsoap.plugin.vaadin") version "1.3.1"
