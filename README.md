@@ -87,8 +87,8 @@ instance, without having to restart Tomcat.
 
 * The DSL technique is used to allow you to nest your components in a structured code. This is provided by the
   Karibu-DSL library; please visit the [Karibu-DSL home page](https://github.com/mvysny/karibu-dsl) for more information.
-* The serverless testing is demonstrated in the [MyUITest.kt](src/test/kotlin/org/test/MyUITest.kt) file.
-  Please read [Serverless Web Testing](https://github.com/mvysny/karibu-testing) for more information.
+* The browserless testing is demonstrated in the [MyUITest.kt](src/test/kotlin/org/test/MyUITest.kt) file.
+  Please read [Browserless Web Testing](https://github.com/mvysny/karibu-testing) for more information.
 * For more complex example which includes multiple pages, please see the [Karibu-DSL example-v8 app](https://github.com/mvysny/karibu-dsl#quickstart).
 * For information on how to connect the UI to the database backend please visit [Vaadin-on-Kotlin](http://www.vaadinonkotlin.eu/)
   You can find a complete CRUD example at [Vaadin-on-Kotlin vok-example-crud-sql2o](https://github.com/mvysny/vaadin-on-kotlin#example-project).
