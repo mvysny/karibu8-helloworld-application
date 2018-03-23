@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.2.30"
+    kotlin("jvm") version "1.2.31"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.akhikhl.gretty") version "2.0.0"
     id("com.devsoap.plugin.vaadin") version "1.3.1"
@@ -46,7 +46,7 @@ dependencies {
 
     // test support
     testCompile("com.github.kaributesting:karibu-testing-v8:0.4.2")
-    testCompile("com.github.mvysny.dynatest:dynatest:0.6")
+    testCompile("com.github.mvysny.dynatest:dynatest:0.7")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
