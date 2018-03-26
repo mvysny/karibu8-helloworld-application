@@ -33,7 +33,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.3.8")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.3.9")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
