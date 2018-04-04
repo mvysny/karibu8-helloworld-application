@@ -20,7 +20,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.3.2"
+    version = "8.3.3"
 }
 
 gretty {
@@ -45,7 +45,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.4")
+    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.6")
     testCompile("com.github.mvysny.dynatest:dynatest:0.7")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
