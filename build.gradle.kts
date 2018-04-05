@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
     kotlin("jvm") version "1.2.31"
@@ -29,6 +30,10 @@ gretty {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    testLogging {
+        // to see the exceptions of failed tests in Travis-CI console.
+        exceptionFormat = TestExceptionFormat.FULL
+    }
 }
 
 dependencies {
@@ -45,8 +50,8 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.6")
-    testCompile("com.github.mvysny.dynatest:dynatest:0.7")
+    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.8")
+    testCompile("com.github.mvysny.dynatest:dynatest:0.8")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
