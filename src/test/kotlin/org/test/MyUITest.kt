@@ -3,6 +3,7 @@ package org.test
 import com.github.karibu.testing.MockVaadin
 import com.github.karibu.testing._click
 import com.github.karibu.testing._get
+import com.github.karibu.testing._value
 import com.github.mvysny.dynatest.DynaTest
 import com.vaadin.ui.*
 import org.junit.jupiter.api.BeforeEach
@@ -20,7 +21,7 @@ class MyUITest : DynaTest({
         val layout = UI.getCurrent().content as VerticalLayout
 
         // // simulate a text entry as if entered by the user
-        _get<TextField> { caption = "Type your name here:" }.value = "Baron Vladimir Harkonnen"
+        _get<TextField> { caption = "Type your name here:" }._value = "Baron Vladimir Harkonnen"
 
         // simulate a button click as if clicked by the user
         _get<Button> { caption = "Click Me" }._click()
