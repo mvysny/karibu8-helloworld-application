@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/mvysny/karibu-helloworld-application.svg?branch=master)](https://travis-ci.org/mvysny/karibu-helloworld-application)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=karibu-helloworld-app&style=flat&svg=1)](https://karibu-helloworld-app.herokuapp.com/)
 
 # Karibu-DSL Example App / Archetype
 

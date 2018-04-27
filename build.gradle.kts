@@ -56,4 +56,20 @@ dependencies {
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
+
+    // heroku app runner
+    testRuntime("com.github.jsimone:webapp-runner:8.5.30.0")
+}
+
+// Heroku
+tasks {
+    "copyToLib"(Copy::class) {
+        into("$buildDir/server")
+        from(configurations.testRuntime) {
+            include("webapp-runner*")
+        }
+    }
+    "stage" {
+        dependsOn("build", "copyToLib")
+    }
 }
