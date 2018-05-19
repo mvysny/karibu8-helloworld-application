@@ -21,7 +21,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.4.1"
+    version = "8.4.2"
 }
 
 gretty {
@@ -38,7 +38,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.2")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.3")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
