@@ -21,7 +21,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.4.4"
+    version = "8.5.0.rc1"
 }
 
 gretty {
