@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.2.60"
+    kotlin("jvm") version "1.2.61"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.gretty") version "2.1.0"
     id("com.devsoap.plugin.vaadin") version "1.3.1"
@@ -38,7 +38,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.6")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.7")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
