@@ -63,13 +63,13 @@ dependencies {
 
 // Heroku
 tasks {
-    "copyToLib"(Copy::class) {
+    val copyToLib by registering(Copy::class) {
         into("$buildDir/server")
         from(configurations.testRuntime) {
             include("webapp-runner*")
         }
     }
-    "stage" {
-        dependsOn("build", "copyToLib")
+    val stage by registering {
+        dependsOn("build", copyToLib)
     }
 }
