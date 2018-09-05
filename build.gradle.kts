@@ -38,7 +38,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.7")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.8")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -50,15 +50,15 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.15")
-    testCompile("com.github.mvysny.dynatest:dynatest:0.8")
+    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.16")
+    testCompile("com.github.mvysny.dynatest:dynatest:0.9")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    testRuntime("com.github.jsimone:webapp-runner:8.5.30.0")
+    testRuntime("com.github.jsimone:webapp-runner:9.0.11.0")
 }
 
 // Heroku
