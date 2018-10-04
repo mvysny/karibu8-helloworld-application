@@ -24,7 +24,7 @@ import org.slf4j.bridge.SLF4JBridgeHandler
 class MyUI : UI() {
 
     @Override
-    override fun init(vaadinRequest: VaadinRequest?) {
+    override fun init(vaadinRequest: VaadinRequest) {
         lateinit var layout: VerticalLayout
         layout = verticalLayout {
             val name = textField {
