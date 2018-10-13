@@ -11,9 +11,7 @@ plugins {
 defaultTasks("clean", "build")
 
 repositories {
-    mavenCentral()
     jcenter()
-    maven("https://dl.bintray.com/mvysny/github")
 }
 
 tasks.withType<KotlinCompile> {
