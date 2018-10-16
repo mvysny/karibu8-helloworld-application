@@ -37,7 +37,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.10")
+    compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.11")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -49,8 +49,8 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.16")
-    testCompile("com.github.mvysny.dynatest:dynatest:0.9")
+    testCompile("com.github.kaributesting:karibu-testing-v8:0.4.17")
+    testCompile("com.github.mvysny.dynatest:dynatest-engine:0.11")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
