@@ -36,6 +36,8 @@ tasks.withType<Test> {
     }
 }
 
+val staging by configurations.creating
+
 dependencies {
     // Karibu-DSL dependency
     compile("com.github.vok.karibudsl:karibu-dsl-v8:0.4.11")
@@ -50,7 +52,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.kaributesting:karibu-testing-v8:0.5.0")
+    testCompile("com.github.kaributesting:karibu-testing-v8:0.5.1")
     testCompile("com.github.mvysny.dynatest:dynatest-engine:0.11")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
@@ -58,14 +60,14 @@ dependencies {
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    testRuntime("com.github.jsimone:webapp-runner:9.0.11.0")
+    staging("com.github.jsimone:webapp-runner:9.0.11.0")
 }
 
 // Heroku
 tasks {
     val copyToLib by registering(Copy::class) {
         into("$buildDir/server")
-        from(configurations.testRuntime) {
+        from(staging) {
             include("webapp-runner*")
         }
     }
