@@ -15,6 +15,7 @@ import kotlin.test.expect
  */
 class MyUITest : DynaTest({
     beforeEach { MockVaadin.setup({ MyUI() }) }
+    afterEach { MockVaadin.tearDown() }
 
     test("simple UI test") {
         // MockVaadin.setup() prepared the UI for us; we can now read components from it.
