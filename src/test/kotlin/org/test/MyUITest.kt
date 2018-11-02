@@ -6,8 +6,6 @@ import com.github.karibu.testing._get
 import com.github.karibu.testing._value
 import com.github.mvysny.dynatest.DynaTest
 import com.vaadin.ui.*
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
 import kotlin.test.expect
 
 /**
