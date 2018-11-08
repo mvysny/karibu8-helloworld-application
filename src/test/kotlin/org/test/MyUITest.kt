@@ -1,9 +1,6 @@
 package org.test
 
-import com.github.karibu.testing.MockVaadin
-import com.github.karibu.testing._click
-import com.github.karibu.testing._get
-import com.github.karibu.testing._value
+import com.github.mvysny.kaributesting.v8.*
 import com.github.mvysny.dynatest.DynaTest
 import com.vaadin.ui.*
 import kotlin.test.expect
