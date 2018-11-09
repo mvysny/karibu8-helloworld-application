@@ -1,6 +1,6 @@
 package org.test
 
-import com.github.vok.karibudsl.*
+import com.github.mvysny.karibudsl.v8.*
 import javax.servlet.annotation.WebServlet
 
 import com.vaadin.annotations.Theme
