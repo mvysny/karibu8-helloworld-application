@@ -11,7 +11,7 @@ plugins {
 defaultTasks("clean", "build")
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 tasks.withType<KotlinCompile> {
@@ -39,7 +39,7 @@ val staging by configurations.creating
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.5.0")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.5.1")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
