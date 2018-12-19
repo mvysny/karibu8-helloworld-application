@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.3.10"
+    kotlin("jvm") version "1.3.11"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.gretty") version "2.2.0"
     id("com.devsoap.plugin.vaadin") version "1.4.1"
@@ -51,7 +51,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.0.1")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.0.3")
     testCompile("com.github.mvysny.dynatest:dynatest-engine:0.13")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
