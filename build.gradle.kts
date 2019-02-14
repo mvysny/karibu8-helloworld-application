@@ -39,7 +39,7 @@ val staging by configurations.creating
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.5.3")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.6.1")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -51,7 +51,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.0.6")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.2")
     testCompile("com.github.mvysny.dynatest:dynatest-engine:0.13")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
