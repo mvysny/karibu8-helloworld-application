@@ -52,7 +52,7 @@ dependencies {
 
     // test support
     testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.2")
-    testCompile("com.github.mvysny.dynatest:dynatest-engine:0.14")
+    testCompile("com.github.mvysny.dynatest:dynatest-engine:0.15")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
