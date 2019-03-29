@@ -59,7 +59,7 @@ dependencies {
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.github.jsimone:webapp-runner:9.0.16.0")
+    staging("com.github.jsimone:webapp-runner-main:9.0.16.0")
 }
 
 // Heroku
