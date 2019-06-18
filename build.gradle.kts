@@ -4,7 +4,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     kotlin("jvm") version "1.3.31"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
-    id("org.gretty") version "2.2.0"
+    id("org.gretty") version "2.3.1"
     id("com.devsoap.plugin.vaadin") version "1.4.1"
 }
 
@@ -59,7 +59,7 @@ dependencies {
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.github.jsimone:webapp-runner-main:9.0.17.0")
+    staging("com.github.jsimone:webapp-runner-main:9.0.20.1")
 }
 
 // Heroku
