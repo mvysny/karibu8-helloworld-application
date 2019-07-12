@@ -51,7 +51,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.6")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.8")
     testCompile("com.github.mvysny.dynatest:dynatest-engine:0.15")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
@@ -59,7 +59,7 @@ dependencies {
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.github.jsimone:webapp-runner-main:9.0.20.1")
+    staging("com.github.jsimone:webapp-runner-main:9.0.22.0")
 }
 
 // Heroku
