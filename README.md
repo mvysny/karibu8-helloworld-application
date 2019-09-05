@@ -87,6 +87,8 @@ instance, without having to restart Tomcat.
 3. Start your newly created launch configuration in Debug mode. This way, you can modify the code
    and press `Ctrl+F9` to hot-redeploy the code. This only redeploys java code though, to
    redeploy resources just press `Ctrl+F10` and select "Update classes and resources"
+   
+Or watch the [Debugging Vaadin Apps With Intellij video](https://www.youtube.com/watch?v=M0Q7D03bYXc).
 
 ## Dissection of project files
 
