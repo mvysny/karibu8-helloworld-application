@@ -45,8 +45,8 @@ dependencies {
     compile(kotlin("stdlib-jdk8"))
 
     // logging
-    // currently we are logging through the SLF4J API to LogBack. See src/main/resources/logback.xml file for the logger configuration
-    compile("ch.qos.logback:logback-classic:1.2.3")
+    // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
+    compile("org.slf4j:slf4j-simple:1.7.25")
     // this will allow us to configure Vaadin to log to SLF4J
     compile("org.slf4j:jul-to-slf4j:1.7.25")
 

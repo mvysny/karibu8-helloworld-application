@@ -10,6 +10,7 @@ import com.vaadin.server.VaadinRequest
 import com.vaadin.server.VaadinServlet
 import com.vaadin.ui.UI
 import com.vaadin.ui.VerticalLayout
+import org.slf4j.LoggerFactory
 import org.slf4j.bridge.SLF4JBridgeHandler
 
 /**
@@ -32,11 +33,16 @@ class MyUI : UI() {
             }
             button("Click Me") {
                 onLeftClick {
-                    println("Thanks ${name.value}, it works!")
+                    log.info("Thanks ${name.value}, it works!")
                     layout.label("Thanks ${name.value}, it works!")
                 }
             }
         }
+    }
+
+    companion object {
+        @JvmStatic
+        private val log = LoggerFactory.getLogger(MyUI::class.java)
     }
 }
 

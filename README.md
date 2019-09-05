@@ -96,7 +96,7 @@ Let's look at all files that this project is composed of, and what are the point
 | [.travis.yml](.travis.yml) | Configuration file for [Travis-CI](http://travis-ci.org/) which tells Travis how to build the app. Travis watches your repo; it automatically builds your app and runs all the tests after every commit.
 | [.gitignore](.gitignore) | Tells [Git](https://git-scm.com/) to ignore files that can be produced from your app's sources - be it files produced by Gradle, Intellij project files etc.
 | [src/main/resources/](src/main/resources) | A bunch of static files not compiled by Kotlin in any way; see below for explanation.
-| [logback.xml](src/main/resources/logback.xml) | We're using [Slf4j](https://www.slf4j.org/) for logging and this is the configuration file for Slf4j
+| [simplelogger.properties](src/main/resources/simplelogger.properties) | We're using [Slf4j](https://www.slf4j.org/) for logging and this is the configuration file for [Slf4j Simple Logger](https://www.slf4j.org/api/org/slf4j/impl/SimpleLogger.html).
 | [webapp/](src/main/webapp) | static files provided as-is to the browser. See below for explanation
 | [mytheme/](src/main/webapp/VAADIN/themes/mytheme) | Vaadin Theme which is generally a bunch of SCSS files compiled to one large CSS. Read more at [Creating and Using Themes](https://vaadin.com/docs/v8/framework/themes/themes-creating.html)
 | [src/main/kotlin/](src/main/kotlin) | The main Kotlin sources of your web app. You'll be mostly editing files located in this folder.
