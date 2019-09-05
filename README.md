@@ -45,12 +45,15 @@ This will allow you to quickly start the example app and allow you to do some ba
 
 The project is using an automatically generated widgetset by default. 
 When you add a dependency that needs client-side compilation, the Vaadin Gradle plugin will 
-automatically generate it for you. Your own client-side customisations can be added into
+automatically generate it for you (the `AppWidgetset.gwt.xml` file; Vaadin UI
+will automatically use the `@Widgetset("AppWidgetset")` if such file exists).
+Your own client-side customisations can be added into
 package "client".
 
-Debugging client side code  @todo revisit with Gradle
-  - run "mvn vaadin:run-codeserver" on a separate console while the application is running
-  - activate Super Dev Mode in the debug window of the application
+Debugging client side code with [Vaadin Gradle Plugin's superdevmode](https://github.com/johndevs/gradle-vaadin-plugin/wiki/Tasks-and-configuration-DSL#vaadinsuperdevmode):
+  - run "./gradlew vaadinSuperDevMode" on a separate console while the application is running
+  - browse to [http://localhost:8080/?superdevmode](http://localhost:8080/?superdevmode) to activate the superdevmode
+  - Read more on the superdevmode here: [Debugging Your Widgetset Components With SuperDevMode For Dummies](https://mvysny.github.io/Debugging-your-widgetset-components-with-superdevmode-for-dummies/)
 
 ## Developing a theme using the runtime compiler
 
@@ -100,7 +103,7 @@ Let's look at all files that this project is composed of, and what are the point
 | [webapp/](src/main/webapp) | static files provided as-is to the browser. See below for explanation
 | [mytheme/](src/main/webapp/VAADIN/themes/mytheme) | Vaadin Theme which is generally a bunch of SCSS files compiled to one large CSS. Read more at [Creating and Using Themes](https://vaadin.com/docs/v8/framework/themes/themes-creating.html)
 | [src/main/kotlin/](src/main/kotlin) | The main Kotlin sources of your web app. You'll be mostly editing files located in this folder.
-| [MyUI.kt](src/main/kotlin/org/test/MyUI.kt) | When Servlet Container (such as Tomcat) starts your app, it will show the components attached to the main `UI` class, or in this case, the `MyUI` class. The `MyUIServlet` defines which UI to use and where to map the application to.
+| [MyUI.kt](src/main/kotlin/org/test/MyUI.kt) | When Servlet Container (such as [Tomcat](http://tomcat.apache.org/)) starts your app, it will show the components attached to the main `UI` class, or in this case, the `MyUI` class. The `MyUIServlet` defines which UI to use and where to map the application to.
 | [MyUITest.kt](src/test/kotlin/org/test/MyUITest.kt) | Automatically run by Gradle to test your UI; see [Karibu Testing](https://github.com/mvysny/karibu-testing) for more information.
 
 # More Resources
