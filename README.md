@@ -7,13 +7,13 @@
 Template for a simple Kotlin-DSL application that only requires a Servlet 3.0 container to run.
 Just clone this repo and start experimenting!
 
-Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl); for more information about the
-Karibu-DSL framework please see https://github.com/mvysny/karibu-dsl .
-For more information on Vaadin please see https://vaadin.com/docs/-/part/framework/tutorial.html
+Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl) Kotlin bindings for
+the [Vaadin](https://vaadin.com) framework. For more information on Vaadin please
+see the [Vaadin 8 Documentation](https://vaadin.com/docs/v8/framework/tutorial.html).
 
 # Getting Started
 
-To quickly start the app, make sure that you have Java 8 JDK installed. Then, just type this into your terminal:
+To quickly start the app, make sure that you have Java 8 (or higher) JDK installed. Then, just type this into your terminal:
 
 ```bash
 git clone https://github.com/mvysny/karibu-helloworld-application
@@ -72,7 +72,7 @@ significantly.
 
 It is highly recommended to disable runtime compilation for production WAR files.
 
-# Development with Intellij IDEA Ultimate
+## Development with Intellij IDEA Ultimate
 
 The easiest way (and the recommended way) to develop Karibu-DSL-based web applications is to use Intellij IDEA Ultimate.
 It includes support for launching your project in any servlet container (Tomcat is recommended)
