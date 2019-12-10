@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.3.60"
+    kotlin("jvm") version "1.3.61"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.gretty") version "2.3.1"
     id("com.devsoap.plugin.vaadin") version "1.4.1"
@@ -39,7 +39,7 @@ val staging by configurations.creating
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.7.1")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.7.2")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -51,7 +51,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.28")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.17")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.18")
     testCompile("com.github.mvysny.dynatest:dynatest-engine:0.15")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
@@ -59,7 +59,7 @@ dependencies {
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.github.jsimone:webapp-runner-main:9.0.27.0")
+    staging("com.github.jsimone:webapp-runner-main:9.0.27.1")
 }
 
 // Heroku
