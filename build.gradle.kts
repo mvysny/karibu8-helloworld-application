@@ -19,7 +19,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.9.4"
+    version = "8.10.0"
 }
 
 gretty {
@@ -39,7 +39,7 @@ val staging by configurations.creating
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.7.4")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:0.7.5")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
