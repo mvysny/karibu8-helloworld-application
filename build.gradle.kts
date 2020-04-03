@@ -51,7 +51,7 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.30")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.22")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.23")
     testCompile("com.github.mvysny.dynatest:dynatest-engine:0.16")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
