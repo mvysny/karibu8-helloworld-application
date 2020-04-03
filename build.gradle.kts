@@ -2,16 +2,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.3.61"
+    kotlin("jvm") version "1.3.71"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
-    id("org.gretty") version "2.3.1"
+    id("org.gretty") version "3.0.1"
     id("com.devsoap.plugin.vaadin") version "2.0.0.beta2"
 }
 
 defaultTasks("clean", "build")
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 tasks.withType<KotlinCompile> {
@@ -19,7 +19,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.10.1"
+    version = "8.10.3"
 }
 
 gretty {
@@ -51,15 +51,15 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.30")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.19")
-    testCompile("com.github.mvysny.dynatest:dynatest-engine:0.15")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.21")
+    testCompile("com.github.mvysny.dynatest:dynatest-engine:0.16")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.github.jsimone:webapp-runner-main:9.0.27.1")
+    staging("com.heroku:webapp-runner-main:9.0.31.0")
 }
 
 // Heroku
