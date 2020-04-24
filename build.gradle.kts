@@ -39,20 +39,20 @@ val staging by configurations.creating
 
 dependencies {
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.0")
+    api("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.0")
 
     // include proper kotlin version
-    compile(kotlin("stdlib-jdk8"))
+    api(kotlin("stdlib-jdk8"))
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    compile("org.slf4j:slf4j-simple:1.7.30")
+    implementation("org.slf4j:slf4j-simple:1.7.30")
     // this will allow us to configure Vaadin to log to SLF4J
-    compile("org.slf4j:jul-to-slf4j:1.7.30")
+    implementation("org.slf4j:jul-to-slf4j:1.7.30")
 
     // test support
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.23")
-    testCompile("com.github.mvysny.dynatest:dynatest-engine:0.16")
+    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.24")
+    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.16")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
