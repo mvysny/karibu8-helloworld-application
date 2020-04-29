@@ -39,7 +39,7 @@ val staging by configurations.creating
 
 dependencies {
     // Karibu-DSL dependency
-    api("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.0")
+    api("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.1")
 
     // include proper kotlin version
     api(kotlin("stdlib-jdk8"))
