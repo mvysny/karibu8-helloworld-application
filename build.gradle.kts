@@ -38,17 +38,18 @@ tasks.withType<Test> {
 val staging by configurations.creating
 
 dependencies {
+    // don't use api/implementation: com.devsoap.plugin.vaadin will then cause them not to be packaged in the WAR archive!
     // Karibu-DSL dependency
-    api("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.2")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.2")
 
     // include proper kotlin version
-    api(kotlin("stdlib-jdk8"))
+    compile(kotlin("stdlib-jdk8"))
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    implementation("org.slf4j:slf4j-simple:1.7.30")
+    compile("org.slf4j:slf4j-simple:1.7.30")
     // this will allow us to configure Vaadin to log to SLF4J
-    implementation("org.slf4j:jul-to-slf4j:1.7.30")
+    compile("org.slf4j:jul-to-slf4j:1.7.30")
 
     // test support
     testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.1.26")
