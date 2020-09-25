@@ -19,7 +19,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.11.2"
+    version = "8.11.3"
 }
 
 gretty {
@@ -53,7 +53,7 @@ dependencies {
 
     // test support
     testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.2.5")
-    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.17")
+    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.19")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
