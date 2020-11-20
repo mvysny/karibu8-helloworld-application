@@ -9,6 +9,7 @@ Just clone this repo and start experimenting!
 Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl) Kotlin bindings for
 the [Vaadin](https://vaadin.com) framework. For more information on Vaadin please
 see the [Vaadin 8 Documentation](https://vaadin.com/docs/v8/framework/tutorial.html).
+Also uses the [Vaadin Gradle plugin](https://github.com/johndevs/gradle-vaadin-plugin/wiki).
 
 # Getting Started
 
@@ -42,12 +43,30 @@ This will allow you to quickly start the example app and allow you to do some ba
 
 ## Client-Side compilation
 
-The project is using an automatically generated widgetset by default. 
-When you add a dependency that needs client-side compilation, the Vaadin Gradle plugin will 
+The project is using a pre-compiled widgetset by default, present in the `vaadin-client-compiled.jar` file.
+
+When you add a dependency that needs client-side compilation, the [Vaadin Gradle plugin](https://github.com/johndevs/gradle-vaadin-plugin/wiki) will 
 automatically generate it for you (the `AppWidgetset.gwt.xml` file; Vaadin UI
 will automatically use the `@Widgetset("AppWidgetset")` if such file exists).
 Your own client-side customisations can be added into
-package "client".
+the folder `src/main/java/client`.
+
+### Enabling Widgetset compilation
+
+In order to trigger the client-side compilation, do this:
+
+1. Create an empty folder `src/main/java/client`.
+2. Remove the `compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")` dependency from `build.gradle.kts`
+3. Run `./gradlew`. Vaadin Gradle plugin will detect that there is the `client` folder and will
+  reconfigure the project to use vaadin-client-compiler to GWT-compile the widgetset. It will also
+  generate `src/main/resources/AppWidgetset.gwt.xml` which is a configuration file for the GWT compiler.
+4. Running `./gradlew` again will now compile the widgetset to `src/main/webapp/VAADIN/widgetsets/AppWidgetset` and will package
+  it into the WAR archive. The `AppWidgetset` is somewhat special: if `src/main/resources/AppWidgetset.gwt.xml` is present,
+  Vaadin will auto-activate this widgetset as if the UI was annotated by `@Widgetset("AppWidgetset")`.
+5. You can now place Java-based client-code to `src/main/java/client` and  shared code to `src/main/java/shared`. Remember -
+   GWT can't compile Kotlin.
+
+### Debugging client-side
 
 Debugging client side code with [Vaadin Gradle Plugin's superdevmode](https://github.com/johndevs/gradle-vaadin-plugin/wiki/Tasks-and-configuration-DSL#vaadinsuperdevmode):
   - run "./gradlew vaadinSuperDevMode" on a separate console while the application is running
