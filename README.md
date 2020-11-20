@@ -57,14 +57,14 @@ In order to trigger the client-side compilation, do this:
 
 1. Create an empty folder `src/main/java/client`.
 2. Remove the `compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")` dependency from `build.gradle.kts`
-3. Run `./gradlew`. Vaadin Gradle plugin will detect that there is the `client` folder and will
+3. Run `./gradlew`. Vaadin Gradle plugin will now detect that there is the `client` folder and will
   reconfigure the project to use vaadin-client-compiler to GWT-compile the widgetset. It will also
   generate `src/main/resources/AppWidgetset.gwt.xml` which is a configuration file for the GWT compiler.
 4. Running `./gradlew` again will now compile the widgetset to `src/main/webapp/VAADIN/widgetsets/AppWidgetset` and will package
   it into the WAR archive. The `AppWidgetset` is somewhat special: if `src/main/resources/AppWidgetset.gwt.xml` is present,
   Vaadin will auto-activate this widgetset as if the UI was annotated by `@Widgetset("AppWidgetset")`.
 5. You can now place Java-based client-code to `src/main/java/client` and  shared code to `src/main/java/shared`. Remember -
-   GWT can't compile Kotlin.
+   you have to use Java since GWT can't compile Kotlin.
 
 ### Debugging client-side
 
