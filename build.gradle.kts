@@ -40,7 +40,7 @@ val staging by configurations.creating
 dependencies {
     // don't use api/implementation: com.devsoap.plugin.vaadin will then cause them not to be packaged in the WAR archive!
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.3")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.4")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
