@@ -2,16 +2,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.4.31"
+    kotlin("jvm") version "1.5.30"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
-    id("org.gretty") version "3.0.3"
+    id("org.gretty") version "3.0.6"
     id("com.devsoap.plugin.vaadin") version "2.0.0.beta2"
 }
 
 defaultTasks("clean", "build")
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 tasks.withType<KotlinCompile> {
@@ -19,12 +19,17 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.12.3"
+    version = "8.13.3"
 }
 
 gretty {
     contextPath = "/"
     servletContainer = "jetty9.4"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 tasks.withType<Test> {
@@ -40,7 +45,7 @@ val staging by configurations.creating
 dependencies {
     // don't use api/implementation: com.devsoap.plugin.vaadin will then cause them not to be packaged in the WAR archive!
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.4")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.7")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -52,15 +57,15 @@ dependencies {
     compile("org.slf4j:jul-to-slf4j:1.7.30")
 
     // test support
-    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.2.7")
-    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.19")
+    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.3.2")
+    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.20")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.heroku:webapp-runner-main:9.0.36.1")
+    staging("com.heroku:webapp-runner-main:9.0.41.0")
 }
 
 // Heroku
