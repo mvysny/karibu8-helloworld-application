@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
-    kotlin("jvm") version "1.5.30"
+    kotlin("jvm") version "1.5.31"
     // need to use Gretty here because of https://github.com/johndevs/gradle-vaadin-plugin/issues/317
     id("org.gretty") version "3.0.6"
     id("com.devsoap.plugin.vaadin") version "2.0.0.beta2"
@@ -19,7 +19,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.13.3"
+    version = "8.14.0"
 }
 
 gretty {
@@ -52,12 +52,12 @@ dependencies {
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    compile("org.slf4j:slf4j-simple:1.7.30")
+    compile("org.slf4j:slf4j-simple:1.7.32")
     // this will allow us to configure Vaadin to log to SLF4J
-    compile("org.slf4j:jul-to-slf4j:1.7.30")
+    compile("org.slf4j:jul-to-slf4j:1.7.32")
 
     // test support
-    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.3.2")
+    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.3.3")
     testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.20")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
