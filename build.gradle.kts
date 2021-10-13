@@ -19,7 +19,7 @@ tasks.withType<KotlinCompile> {
 }
 
 vaadin {
-    version = "8.14.0"
+    version = "8.14.1"
 }
 
 gretty {
@@ -45,7 +45,7 @@ val staging by configurations.creating
 dependencies {
     // don't use api/implementation: com.devsoap.plugin.vaadin will then cause them not to be packaged in the WAR archive!
     // Karibu-DSL dependency
-    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.7")
+    compile("com.github.mvysny.karibudsl:karibu-dsl-v8:1.0.8")
 
     // include proper kotlin version
     compile(kotlin("stdlib-jdk8"))
@@ -58,14 +58,14 @@ dependencies {
 
     // test support
     testImplementation("com.github.mvysny.kaributesting:karibu-testing-v8:1.3.3")
-    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.20")
+    testImplementation("com.github.mvysny.dynatest:dynatest-engine:0.21")
 
     // workaround until https://youtrack.jetbrains.com/issue/IDEA-178071 is fixed
     compile("com.vaadin:vaadin-themes:${vaadin.version}")
     compile("com.vaadin:vaadin-client-compiled:${vaadin.version}")
 
     // heroku app runner
-    staging("com.heroku:webapp-runner-main:9.0.41.0")
+    staging("com.heroku:webapp-runner-main:9.0.52.0")
 }
 
 // Heroku
