@@ -11,6 +11,12 @@ the [Vaadin](https://vaadin.com) framework. For more information on Vaadin pleas
 see the [Vaadin 8 Documentation](https://vaadin.com/docs/v8/framework/tutorial.html).
 Also uses the [Vaadin Gradle plugin](https://github.com/johndevs/gradle-vaadin-plugin/wiki).
 
+# Deprecated
+
+Vaadin 8 is no longer maintained and has [reached the end-of-life](https://vaadin.com/vaadin-8). This example will
+not be maintained anymore. Please visit [karibu-helloworld-application](https://github.com/mvysny/karibu-helloworld-application)
+for the up-to-date example.
+
 # Getting Started
 
 To quickly start the app, make sure that you have Java 8 (or higher) JDK installed. Then, just type this into your terminal:
